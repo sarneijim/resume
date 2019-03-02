@@ -3,6 +3,7 @@
 <div class="container-fluid">
   <div class="row">
     <cmp-menu></cmp-menu>
+    <cmp-rrss></cmp-rrss>
     <div >
       <div id="section1" class="bg-success">    
         <h1>Section 1</h1>
@@ -32,11 +33,13 @@
 <script>
 
 import cmpMenu from'./cmp-menu.vue'
+import cmpRrss from'./cmp-rrss.vue'
 
 export default {
   name: 'layout',
   components: {
-    cmpMenu
+    cmpMenu,
+    cmpRrss,
   }
 }
 </script>
