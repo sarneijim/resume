@@ -1,45 +1,55 @@
 <template>
-
-<div class="container-fluid">
-  <div class="row">
-    <cmp-menu></cmp-menu>
-    <cmp-rrss></cmp-rrss>
-    <div >
-      <div id="section1" class="bg-success">    
-        <h1>Section 1</h1>
-        <p>Try to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigation list while scrolling!</p>
-      </div>
-      <div id="section2" class="bg-warning"> 
-        <h1>Section 2</h1>
-        <p>Try to scrollTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navig this section and look at the navigation list while scrolling!</p>
-      </div>        
-      <div id="section3" class="bg-secondary">         
-        <h1>Section 3</h1>
-        <p>Try to scroll this section Try to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigTry to scroll this section and look at the navigand look at the navigation list while scrolling!</p>
-      </div>
-      <div id="section4" class="bg-danger">         
-        <h1>Section 4-1</h1>
-        <p>Try to scroll this section and look at the navigation list while scrolling!</p>
-      </div>      
-      <div id="section42" class="bg-info">         
-        <h1>Section 4-2</h1>
-        <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+  <div class="container-fluid">
+    <div class="row">
+      <cmp-menu></cmp-menu>
+      <cmp-rrss></cmp-rrss>
+      <div class="main">
+        <cmp-about></cmp-about>
+        <cmp-tech></cmp-tech>
+        <cmp-career></cmp-career>
+        <cmp-contact></cmp-contact>
       </div>
     </div>
   </div>
-</div>
 </template>
 
 <script>
-
-import cmpMenu from'./cmp-menu.vue'
-import cmpRrss from'./cmp-rrss.vue'
+import cmpMenu from "./cmp-menu.vue";
+import cmpRrss from "./cmp-rrss.vue";
+import cmpAbout from "./cmp-about.vue";
+import cmpTech from "./cmp-tech.vue";
+import cmpCareer from "./cmp-career.vue";
+import cmpContact from "./cmp-contact.vue";
 
 export default {
-  name: 'layout',
+  name: "layout",
   components: {
     cmpMenu,
     cmpRrss,
+    cmpAbout,
+    cmpTech,
+    cmpCareer,
+    cmpContact
+  }
+};
+</script>
+
+<style lang="scss">
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+.main {
+  margin-top: 50px;
+  width: 100%;
+  @include media-breakpoint-up(md) {
+    margin-top: 0px;
   }
 }
-</script>
+
+.section {
+  @include media-breakpoint-up(md) {
+    padding-left: 50px;
+  }
+}
+</style>
