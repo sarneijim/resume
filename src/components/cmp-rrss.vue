@@ -1,5 +1,5 @@
 <template>
-  <div id="rrss-list" v-bind:class="{ active: isActive}" class="section">
+  <div id="rrss-list" v-bind:class="{ active: isActive}">
     <div class="rrss-title" v-on:click="toogle">
       <i class="fas fa-rss"></i>
     </div>
@@ -30,7 +30,7 @@ export default {
     window.addEventListener("click", this.closeRrss);
   },
   methods: {
-    toogle(event) {
+    toogle() {
       this.isActive = !this.isActive;
     },
     closeRrss(event) {

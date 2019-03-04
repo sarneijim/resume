@@ -1,5 +1,5 @@
 <template>
-  <nav id="cmp-menu" class="section">
+  <nav id="cmp-menu">
     <ul
       class="nav nav-pills"
       v-bind:class="{ active: isActive}"
@@ -49,7 +49,7 @@ export default {
     };
   },
   methods: {
-    toogle: function(event) {
+    toogle() {
       this.isActive = !this.isActive;
     }
   }

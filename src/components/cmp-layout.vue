@@ -40,7 +40,7 @@ export default {
 @import "~bootstrap/scss/mixins";
 
 .main {
-  margin-top: 50px;
+  margin-top: 42px;
   width: 100%;
   @include media-breakpoint-up(md) {
     margin-top: 0px;

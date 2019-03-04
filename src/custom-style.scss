@@ -12,7 +12,9 @@ ul{
 }
 .section {
     background-color: #f2f2f2;
-    border-radius: 8px;
-    background-color: f2f2f2; /* For browsers that do not support gradients */
-    background-image: linear-gradient(#f2f2f2, #fff);
+    background-image: linear-gradient(#f2f2f2, #fff, #f2f2f2);
+    margin: 60px 0;
+    &:first-child {
+        margin: 0;
+    }
 }

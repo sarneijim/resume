@@ -1,142 +1,181 @@
 <template>
   <div id="cmp-tech" class="section">
-    <!--<h1 class="title">Technicals Skills</h1>-->
-    <div class="text-left overflow-hidden">Tools
-      <!-- <img src="../assets/logo-vue.png" alt="Vue" height="120">
-      <img src="../assets/logo-python.png" alt="Python" height="120">
-      <img src="../assets/logo-react.png" alt="React" height="120">
-      <img src="../assets/logo-nodejs.png" alt="Nodejs" height="120">
-      <img src="../assets/logo-javascript.png" alt="Javascript" height="120">-->
-    </div>
+    <h2>Work experience</h2>
+    <ul class="career-list">
+      <li class="career-item">
+        <div class="career-company">
+          <a target="_blank" href="http://www.my01.io/">
+            <img src="@/assets/img/logo-ciena.png" alt="Nodejs" height="120">
+            <span class="sr-only">Indra</span>
+          </a>
+        </div>
+        <div class="career-title career-title--america">
+          <span>Software Engineer</span>
+        </div>
+        <div class="career-date">
+          <span>November 2018 - Present</span>
+        </div>
+        <ul class="career-description">
+          <li class="career-description-item">
+            <p>Experience with web based technologies like HTML/HTML5 (Jade), CSS/CSS3 (Sass) and JavaScript (JQuery)</p>
+          </li>
+          <li class="career-description-item">
+            <p>Develop responsive projects on the web by the use of libraries (Bootstrap)</p>
+          </li>
+          <li class="career-description-item">
+            <p>Modular and reusable code to be used with the web content management platform OWCS (Oracle Web Center Sites)</p>
+          </li>
+          <li class="career-description-item">
+            <p>Knowledge of web accessibility and W3C standards</p>
+          </li>
+          <li class="career-description-item">
+            <p>Use of task runners such as Grunt and Gulp</p>
+          </li>
+          <li class="career-description-item">
+            <p>Use of templating engines (handlebars)</p>
+          </li>
+          <li class="career-description-item">
+            <p>Knowledge of version control systems (Git, SVN)</p>
+          </li>
+          <li class="career-description-item">
+            <p>Use of project management tools (JIRA)</p>
+          </li>
+        </ul>
+      </li>
+      <li class="career-item">
+        <div class="career-company">
+          <a target="_blank" href="http://www.my01.io/">
+            <img src="@/assets/img/logo-indra2.png" alt="Nodejs" height="120">
+            <span class="sr-only">Indra</span>
+          </a>
+        </div>
+        <div class="career-title career-title--europe">
+          <span>Front End Developer</span>
+        </div>
+        <div class="career-date">
+          <span>March 2017 - May 2018</span>
+        </div>
+        <ul class="career-description">
+          <li class="career-description-item">
+            <p>Experience with web based technologies like HTML/HTML5 (Jade), CSS/CSS3 (Sass) and JavaScript (JQuery)</p>
+          </li>
+          <li class="career-description-item">
+            <p>Develop responsive projects on the web by the use of libraries (Bootstrap)</p>
+          </li>
+          <li class="career-description-item">
+            <p>Modular and reusable code to be used with the web content management platform OWCS (Oracle Web Center Sites)</p>
+          </li>
+          <li class="career-description-item">
+            <p>Knowledge of web accessibility and W3C standards</p>
+          </li>
+          <li class="career-description-item">
+            <p>Use of task runners such as Grunt and Gulp</p>
+          </li>
+          <li class="career-description-item">
+            <p>Use of templating engines (handlebars)</p>
+          </li>
+          <li class="career-description-item">
+            <p>Knowledge of version control systems (Git, SVN)</p>
+          </li>
+          <li class="career-description-item">
+            <p>Use of project management tools (JIRA)</p>
+          </li>
+        </ul>
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Tech"
+  name: "Career"
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-.title {
-  color: #54ce50;
-  font-family: Varela Round;
-}
-
-.react-anim {
-  font-weight: bold;
-  position: relative;
-  animation: react-move 5s infinite;
-}
-
-.node-anim {
-  font-weight: bold;
-  position: relative;
-  animation: node-move 5s infinite;
-}
-
-.vue-anim {
-  font-weight: bold;
-  position: relative;
-  animation: vue-move 5s infinite;
-}
-
-.js-anim {
-  font-weight: bold;
-  position: relative;
-  animation: js-move 5s infinite;
-}
-
-/* Standard syntax */
-#react-anim {
-  animation-timing-function: linear;
-}
-#vue-anim {
-  animation-timing-function: ease;
-}
-#node-anim {
-  animation-timing-function: ease-in;
-}
-#js-anim {
-  animation-timing-function: ease-out;
-}
-
-/* Standard syntax */
-@keyframes react-move {
-  0% {
-    left: 0px;
-    top: 0px;
-  }
-  50% {
-    left: 50%;
-    top: 50px;
-  }
-  100% {
-    left: 100%;
-    top: 0px;
-  }
-}
-
-/* Standard syntax */
-@keyframes vue-move {
-  0% {
-    left: 0px;
-    top: 0px;
-  }
-  50% {
-    left: 50%;
-    top: 50px;
-  }
-  100% {
-    left: 100%;
-    top: 0px;
-  }
-}
-
-/* Standard syntax */
-@keyframes node-move {
-  0% {
-    left: 0px;
-    top: 0px;
-  }
-  50% {
-    left: 50%;
-    top: 50px;
-  }
-  100% {
-    left: 100%;
-    top: 0px;
-  }
-}
-
-/* Standard syntax */
-@keyframes js-move {
-  0% {
-    left: 0px;
-    top: 0px;
-  }
-  50% {
-    left: 50%;
-    top: -90px;
-  }
-  100% {
-    left: 100%;
-    top: 0px;
-  }
-}
-
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  padding: 0;
-}
-li {
+<style scoped lang="scss">
+.career-item:before {
+  content: " ";
+  background: #d4d9df;
   display: inline-block;
-  margin: 0 10px;
+  position: absolute;
+  top: 0;
+  left: -26px;
+  width: 2px;
+  height: 22px;
 }
-a {
-  color: #42b983;
+.career-item:after {
+  content: " ";
+  background: #d4d9df;
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: -26px;
+  width: 2px;
+  height: calc(100% - 42px);
+}
+.career-title:before {
+  font-family: "Font Awesome 5 Free";
+  display: inline-block;
+  position: absolute;
+  color: #c31f26;
+  font-size: 20px;
+  left: -35px;
+  top: 17px;
+  width: 20px;
+  height: 20px;
+}
+
+.career-title--europe:before {
+  content: "\f7a2";
+}
+.career-title--america:before {
+  content: "\f57d";
+}
+.career-item {
+  position: relative;
+  padding: 15px 0px;
+}
+.career-company {
+  font-weight: 800;
+  text-align: left;
+  img {
+    height: 20px;
+  }
+}
+.career-title {
+  font-weight: 800;
+  text-align: left;
+  margin: 7px 0;
+}
+.career-list {
+  padding: 10px 10px 0 50px;
+  position: relative;
+  max-width: 950px;
+  margin: 0 auto;
+}
+.career-date {
+  position: absolute;
+  right: 0;
+  top: 8px;
+  font-size: 0.9em;
+  font-style: italic;
+}
+.career-description-item {
+  text-align: left;
+  padding: 0 0 0 23px;
+  position: relative;
+  &:before {
+    font-weight: 800;
+    font-family: "Font Awesome 5 Free";
+    content: "\f00c";
+    position: absolute;
+    left: 0;
+    font-size: 12px;
+    top: 3px;
+  }
+  p {
+    margin: 0;
+  }
 }
 </style>
