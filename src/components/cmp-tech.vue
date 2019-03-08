@@ -1,181 +1,206 @@
 <template>
   <div id="cmp-tech" class="section">
-    <h2>Work experience</h2>
-    <ul class="career-list">
-      <li class="career-item">
-        <div class="career-company">
-          <a target="_blank" href="http://www.my01.io/">
-            <img src="@/assets/img/logo-ciena.png" alt="Nodejs" height="120">
-            <span class="sr-only">Indra</span>
-          </a>
-        </div>
-        <div class="career-title career-title--america">
-          <span>Software Engineer</span>
-        </div>
-        <div class="career-date">
-          <span>November 2018 - Present</span>
-        </div>
-        <ul class="career-description">
-          <li class="career-description-item">
-            <p>Experience with web based technologies like HTML/HTML5 (Jade), CSS/CSS3 (Sass) and JavaScript (JQuery)</p>
-          </li>
-          <li class="career-description-item">
-            <p>Develop responsive projects on the web by the use of libraries (Bootstrap)</p>
-          </li>
-          <li class="career-description-item">
-            <p>Modular and reusable code to be used with the web content management platform OWCS (Oracle Web Center Sites)</p>
-          </li>
-          <li class="career-description-item">
-            <p>Knowledge of web accessibility and W3C standards</p>
-          </li>
-          <li class="career-description-item">
-            <p>Use of task runners such as Grunt and Gulp</p>
-          </li>
-          <li class="career-description-item">
-            <p>Use of templating engines (handlebars)</p>
-          </li>
-          <li class="career-description-item">
-            <p>Knowledge of version control systems (Git, SVN)</p>
-          </li>
-          <li class="career-description-item">
-            <p>Use of project management tools (JIRA)</p>
-          </li>
+    <h2>Technical Skills</h2>
+    <div class="tech-main" v-on="{mouseover: checkMouseover}">
+      <div class="tech-list">
+        <ul>
+          <li>HTML</li>
+          <li>JADE</li>
+          <li>CSS</li>
+          <li>SCSS</li>
+          <li>Bootstrap</li>
+          <li>Element UI</li>
+          <li>AgGrid</li>
+          <li>Javascript</li>
+          <li>Jquery</li>
+          <li>React</li>
+          <li>Ember</li>
+          <li>Vue</li>
+          <li>SQL</li>
+          <li>Ruby on Rails</li>
+          <li>Git</li>
+          <li>SVN</li>
+          <li>ExpressJS</li>
+          <li>NodeJS</li>
         </ul>
-      </li>
-      <li class="career-item">
-        <div class="career-company">
-          <a target="_blank" href="http://www.my01.io/">
-            <img src="@/assets/img/logo-indra2.png" alt="Nodejs" height="120">
-            <span class="sr-only">Indra</span>
-          </a>
-        </div>
-        <div class="career-title career-title--europe">
-          <span>Front End Developer</span>
-        </div>
-        <div class="career-date">
-          <span>March 2017 - May 2018</span>
-        </div>
-        <ul class="career-description">
-          <li class="career-description-item">
-            <p>Experience with web based technologies like HTML/HTML5 (Jade), CSS/CSS3 (Sass) and JavaScript (JQuery)</p>
-          </li>
-          <li class="career-description-item">
-            <p>Develop responsive projects on the web by the use of libraries (Bootstrap)</p>
-          </li>
-          <li class="career-description-item">
-            <p>Modular and reusable code to be used with the web content management platform OWCS (Oracle Web Center Sites)</p>
-          </li>
-          <li class="career-description-item">
-            <p>Knowledge of web accessibility and W3C standards</p>
-          </li>
-          <li class="career-description-item">
-            <p>Use of task runners such as Grunt and Gulp</p>
-          </li>
-          <li class="career-description-item">
-            <p>Use of templating engines (handlebars)</p>
-          </li>
-          <li class="career-description-item">
-            <p>Knowledge of version control systems (Git, SVN)</p>
-          </li>
-          <li class="career-description-item">
-            <p>Use of project management tools (JIRA)</p>
-          </li>
-        </ul>
-      </li>
-    </ul>
+      </div>
+      <div class="tech-animation">
+        <transition-group :name="shuffleSpeed" tag="div" class="deck">
+          <div v-for="card in cards" :key="card.id" class="card card-container">
+            <img class="card" :src="card.image">
+          </div>
+        </transition-group>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import Vue from "vue";
 export default {
-  name: "Career"
+  name: "Tech",
+  data: function() {
+    return {
+      cards: [],
+      image: [
+        require("@/assets/img/tech/angular.png"),
+        require("@/assets/img/tech/apple.png"),
+        require("@/assets/img/tech/bootstrap.png"),
+        require("@/assets/img/tech/bower.png"),
+        require("@/assets/img/tech/css.png"),
+        require("@/assets/img/tech/elementui.png"),
+        require("@/assets/img/tech/ember.png"),
+        require("@/assets/img/tech/git.png"),
+        require("@/assets/img/tech/grunt.png"),
+        require("@/assets/img/tech/gulp.png"),
+        require("@/assets/img/tech/handlebars.png"),
+        require("@/assets/img/tech/heroku.png"),
+        require("@/assets/img/tech/html.png"),
+        require("@/assets/img/tech/jquery.png"),
+        require("@/assets/img/tech/js.png"),
+        require("@/assets/img/tech/kraken.png"),
+        require("@/assets/img/tech/node.png"),
+        require("@/assets/img/tech/rails.png"),
+        require("@/assets/img/tech/react.png"),
+        require("@/assets/img/tech/ruby.png"),
+        require("@/assets/img/tech/scss.png"),
+        require("@/assets/img/tech/sql.png"),
+        require("@/assets/img/tech/sublime.png"),
+        require("@/assets/img/tech/svn.png"),
+        require("@/assets/img/tech/tortoise.png"),
+        require("@/assets/img/tech/ubuntu.png"),
+        require("@/assets/img/tech/vc.png"),
+        require("@/assets/img/tech/vue.png"),
+        require("@/assets/img/tech/windows.png"),
+        require("@/assets/img/tech/w3.png")
+      ],
+      shuffleSpeed: "shuffle"
+    };
+  },
+  created() {
+    this.displayInitialDeck();
+  },
+  methods: {
+    checkMouseover() {
+      const element = this.$el.querySelector(".card");
+      if (!element.classList.contains("shuffle-move")) {
+        this.shuffleDeck();
+      }
+    },
+    displayInitialDeck() {
+      let id = 1;
+      this.cards = [];
+      for (let r = 0; r < this.image.length; r++) {
+        let card = {
+          id: id,
+          image: this.image[r]
+        };
+        this.cards.push(card);
+        id++;
+      }
+    },
+    shuffleDeck() {
+      for (let i = this.cards.length - 1; i > 0; i--) {
+        let randomIndex = Math.floor(Math.random() * i);
+        let temp = this.cards[i];
+        Vue.set(this.cards, i, this.cards[randomIndex]);
+        Vue.set(this.cards, randomIndex, temp);
+      }
+    }
+  }
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-.career-item:before {
-  content: " ";
-  background: #d4d9df;
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  left: -26px;
-  width: 2px;
-  height: 22px;
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+.tech-main {
+  @include media-breakpoint-up(md) {
+    display: flex;
+    align-items: center;
+    max-width: 750px;
+    margin: 0 auto;
+  }
 }
-.career-item:after {
-  content: " ";
-  background: #d4d9df;
-  display: inline-block;
-  position: absolute;
-  bottom: 0;
-  left: -26px;
-  width: 2px;
-  height: calc(100% - 42px);
+.tech-list {
+  @include media-breakpoint-up(md) {
+    width: 70%;
+  }
+  ul {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    padding-top: 10px;
+    width: 265px;
+    margin: 0 auto;
+    @include media-breakpoint-up(sm) {
+      columns: 3;
+      -webkit-columns: 3;
+      -moz-columns: 3;
+      padding-top: 10px;
+      width: 450px;
+    }
+
+    text-align: left;
+    margin-bottom: 40px;
+
+    li {
+      position: relative;
+      padding: 0 0 0 23px;
+      &:before {
+        font-weight: 800;
+        font-family: "Font Awesome 5 Free";
+        content: "\f00c";
+        font-size: 12px;
+        position: absolute;
+        top: 3px;
+        left: 0px;
+      }
+    }
+  }
 }
-.career-title:before {
-  font-family: "Font Awesome 5 Free";
+.tech-animation {
+  @include media-breakpoint-up(md) {
+    width: 30%;
+  }
   display: inline-block;
-  position: absolute;
-  color: #c31f26;
-  font-size: 20px;
-  left: -35px;
-  top: 17px;
-  width: 20px;
-  height: 20px;
+  padding-bottom: 50px;
+}
+.card {
+  width: 100%;
+  float: left;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border: none;
+}
+.card-container {
+  @include media-breakpoint-up(sm) {
+    width: calc(100% / 15 - 4px);
+  }
+  @include media-breakpoint-up(md) {
+    width: calc(100% / 6 - 10px);
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+  width: calc(100% / 10 - 4px);
+  float: left;
+  margin: 2px;
+  border: none;
 }
 
-.career-title--europe:before {
-  content: "\f7a2";
+.shuffle-move {
+  transition: transform 1s;
 }
-.career-title--america:before {
-  content: "\f57d";
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
 }
-.career-item {
-  position: relative;
-  padding: 15px 0px;
-}
-.career-company {
-  font-weight: 800;
-  text-align: left;
-  img {
-    height: 20px;
-  }
-}
-.career-title {
-  font-weight: 800;
-  text-align: left;
-  margin: 7px 0;
-}
-.career-list {
-  padding: 10px 10px 0 50px;
-  position: relative;
-  max-width: 950px;
-  margin: 0 auto;
-}
-.career-date {
-  position: absolute;
-  right: 0;
-  top: 8px;
-  font-size: 0.9em;
-  font-style: italic;
-}
-.career-description-item {
-  text-align: left;
-  padding: 0 0 0 23px;
-  position: relative;
-  &:before {
-    font-weight: 800;
-    font-family: "Font Awesome 5 Free";
-    content: "\f00c";
-    position: absolute;
-    left: 0;
-    font-size: 12px;
-    top: 3px;
-  }
-  p {
-    margin: 0;
-  }
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

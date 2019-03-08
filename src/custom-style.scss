@@ -17,4 +17,7 @@ ul{
     &:first-child {
         margin: 0;
     }
+    @include media-breakpoint-up(md) {
+      padding-left: 50px;
+    }
 }

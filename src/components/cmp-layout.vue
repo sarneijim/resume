@@ -7,7 +7,7 @@
         <cmp-about></cmp-about>
         <cmp-tech></cmp-tech>
         <cmp-career></cmp-career>
-        <cmp-contact></cmp-contact>
+        <!-- <cmp-contact></cmp-contact> -->
       </div>
     </div>
   </div>
@@ -34,7 +34,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
@@ -44,12 +44,6 @@ export default {
   width: 100%;
   @include media-breakpoint-up(md) {
     margin-top: 0px;
-  }
-}
-
-.section {
-  @include media-breakpoint-up(md) {
-    padding-left: 50px;
   }
 }
 </style>
