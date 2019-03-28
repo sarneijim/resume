@@ -94,31 +94,35 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+#cmp-career {
+  background: var(--fifth-color);
+  color: var(--second-color);
+}
 .career-item:before {
   content: " ";
-  background: #d4d9df;
+  background: var(--third-color);
   display: inline-block;
   position: absolute;
   top: 0;
   left: -26px;
-  width: 2px;
+  width: 1px;
   height: 22px;
 }
 .career-item:after {
   content: " ";
-  background: #d4d9df;
+  background: var(--third-color);
   display: inline-block;
   position: absolute;
   bottom: 0;
   left: -26px;
-  width: 2px;
+  width: 1px;
   height: calc(100% - 42px);
 }
 .career-title:before {
   font-family: "Font Awesome 5 Free";
   display: inline-block;
   position: absolute;
-  color: #c31f26;
+  color: var(--second-color);
   font-size: 20px;
   left: -35px;
   top: 17px;
@@ -147,9 +151,10 @@ export default {
   font-weight: 800;
   text-align: left;
   margin: 7px 0;
+  color: var(--first-color);
 }
 .career-list {
-  padding: 10px 10px 0 50px;
+  padding: 10px 10px 50px 50px;
   position: relative;
   max-width: 950px;
   margin: 0 auto;

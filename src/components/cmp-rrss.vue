@@ -56,7 +56,8 @@ export default {
   top: 0;
   position: fixed;
   width: 20%;
-  background-color: rgba(45, 45, 45, 0.98);
+  background-color: var(--fourth-color);
+  box-shadow: 0 4px 0px 0 rgba(0, 0, 0, 0.2), 0 6px 0px 0 rgba(0, 0, 0, 0.19);
   @include media-breakpoint-up(md) {
     display: none;
   }
@@ -66,13 +67,14 @@ export default {
   justify-content: space-between;
   width: 100%;
   color: #fff;
-  background-color: rgba(45, 45, 45, 0.98);
+  background-color: var(--fourth-color);
   overflow: hidden;
   padding: 0;
   top: 42px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   display: none;
+  box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.2), 0 6px 0 0 rgba(0, 0, 0, 0.19);
   @include media-breakpoint-up(md) {
     display: flex;
     border-top-right-radius: 5px;
@@ -83,6 +85,7 @@ export default {
     position: fixed;
     left: 0;
     top: 480px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 }
 .active .rrss-list {
@@ -106,7 +109,7 @@ export default {
   }
 }
 i {
-  color: #fff;
+  color: var(--fifth-color);
   padding: 13px;
 }
 </style>

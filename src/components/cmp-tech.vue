@@ -116,6 +116,10 @@ export default {
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
 
+#cmp-tech {
+  background: var(--third-color);
+  color: var(--second-color);
+}
 .tech-main {
   @include media-breakpoint-up(md) {
     display: flex;
@@ -171,23 +175,23 @@ export default {
 .card {
   width: 100%;
   float: left;
-  margin-right: 5px;
-  margin-bottom: 5px;
   border: none;
+  img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }
 }
 .card-container {
   @include media-breakpoint-up(sm) {
-    width: calc(100% / 15 - 4px);
+    width: calc(100% / 15 - 2px);
   }
   @include media-breakpoint-up(md) {
-    width: calc(100% / 6 - 10px);
-    margin-right: 5px;
-    margin-bottom: 5px;
+    width: calc(100% / 6 - 2px);
   }
-  width: calc(100% / 10 - 4px);
+  width: calc(100% / 10 - 2px);
   float: left;
-  margin: 2px;
-  border: none;
+  margin: 1px;
+  border: 2px solid var(--fourth-color);
 }
 
 .shuffle-move {

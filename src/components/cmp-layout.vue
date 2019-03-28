@@ -4,10 +4,12 @@
       <cmp-menu></cmp-menu>
       <cmp-rrss></cmp-rrss>
       <div class="main">
+        <cmp-cover></cmp-cover>
         <cmp-about></cmp-about>
         <cmp-tech></cmp-tech>
         <cmp-career></cmp-career>
-        <!-- <cmp-contact></cmp-contact> -->
+        <cmp-edu></cmp-edu>
+        <cmp-contact></cmp-contact>
       </div>
     </div>
   </div>
@@ -16,9 +18,11 @@
 <script>
 import cmpMenu from "./cmp-menu.vue";
 import cmpRrss from "./cmp-rrss.vue";
+import cmpCover from "./cmp-cover.vue";
 import cmpAbout from "./cmp-about.vue";
 import cmpTech from "./cmp-tech.vue";
 import cmpCareer from "./cmp-career.vue";
+import cmpEdu from "./cmp-edu.vue";
 import cmpContact from "./cmp-contact.vue";
 
 export default {
@@ -26,9 +30,11 @@ export default {
   components: {
     cmpMenu,
     cmpRrss,
+    cmpCover,
     cmpAbout,
     cmpTech,
     cmpCareer,
+    cmpEdu,
     cmpContact
   }
 };

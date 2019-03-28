@@ -25,7 +25,7 @@
         </a>
       </li>
       <li class="nav-item dropdown">
-        <a v-on:click="toogle" class="nav-link" href="#section4">
+        <a v-on:click="toogle" class="nav-link" href="#cmp-edu">
           <i class="fas fa-graduation-cap"></i>
           <span>Education</span>
         </a>
@@ -71,9 +71,10 @@ export default {
   justify-content: space-between;
   width: 80%;
   color: #fff;
-  background-color: rgba(45, 45, 45, 0.98);
+  background-color: var(--fourth-color);
   overflow: hidden;
   -webkit-transition: width 1s;
+  box-shadow: 0 4px 0px 0 rgba(0, 0, 0, 0.2), 0 6px 0px 0 rgba(0, 0, 0, 0.19);
   // transition-delay: 2s;
   @include media-breakpoint-up(md) {
     border-top-right-radius: 5px;
@@ -82,6 +83,7 @@ export default {
     width: 40px;
     height: 450px;
     margin-top: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
   &.active {
     @include media-breakpoint-up(md) {
@@ -99,13 +101,13 @@ export default {
   }
   span {
     white-space: nowrap;
-    color: #fff;
+    color: var(--fifth-color);
     @include media-breakpoint-down(sm) {
       display: none;
     }
   }
   i {
-    color: #fff;
+    color: var(--fifth-color);
     padding: 13px;
   }
   .nav-link {
@@ -114,7 +116,6 @@ export default {
       &::before {
         content: "";
         width: 100%;
-        border-top: solid 2px #c31f26;
         border-radius: 1px;
         position: absolute;
         bottom: 0;
@@ -127,7 +128,7 @@ export default {
       align-items: center;
       &.active {
         &::before {
-          border-left: solid 1px #fff;
+          border-left: solid 1px var(--fifth-color);
           border-top: none;
           top: 0;
           left: 0;
