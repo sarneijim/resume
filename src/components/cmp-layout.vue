@@ -46,8 +46,10 @@ export default {
 @import "~bootstrap/scss/mixins";
 
 .main {
-  margin-top: 42px;
+  padding-bottom: 50px;
   width: 100%;
+  background: var(--third-color);
+  background-image: url(../assets/img/bg2.png);
   @include media-breakpoint-up(md) {
     margin-top: 0px;
   }

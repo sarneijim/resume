@@ -7,31 +7,31 @@
       @mouseout="isActive = false"
     >
       <li class="nav-item">
-        <a v-on:click="toogle" class="nav-link active" href="#cmp-about">
+        <a v-on:click="toogle" class="nav-link active" href="#about">
           <i class="fas fa-user"></i>
           <span>About</span>
         </a>
       </li>
       <li class="nav-item">
-        <a v-on:click="toogle" class="nav-link" href="#cmp-tech">
+        <a v-on:click="toogle" class="nav-link" href="#tech">
           <i class="fas fa-laptop-code"></i>
           <span>Technical Skills</span>
         </a>
       </li>
       <li class="nav-item">
-        <a v-on:click="toogle" class="nav-link" href="#cmp-career">
+        <a v-on:click="toogle" class="nav-link" href="#career">
           <i class="fas fa-briefcase"></i>
           <span>Professional experience</span>
         </a>
       </li>
       <li class="nav-item dropdown">
-        <a v-on:click="toogle" class="nav-link" href="#cmp-edu">
+        <a v-on:click="toogle" class="nav-link" href="#edu">
           <i class="fas fa-graduation-cap"></i>
           <span>Education</span>
         </a>
       </li>
       <li class="nav-item dropdown">
-        <a v-on:click="toogle" class="nav-link" href="#cmp-contact">
+        <a v-on:click="toogle" class="nav-link" href="#contact">
           <i class="fas fa-envelope"></i>
           <span>Contact</span>
         </a>
@@ -81,7 +81,7 @@ export default {
     border-bottom-right-radius: 5px;
     flex-direction: column;
     width: 40px;
-    height: 450px;
+    height: 350px;
     margin-top: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }

@@ -1,5 +1,5 @@
 <template>
-  <div id="cmp-about" class="section">
+  <div id="about" class="section">
     <div class="about-img">
       <img src="@/assets/img/y4.jpg" alt="sara">
     </div>
@@ -37,7 +37,7 @@ export default {
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
 
-#cmp-about {
+#about {
   background-color: var(--fifth-color);
   display: flex;
   align-items: center;
@@ -50,13 +50,14 @@ export default {
 .about-img {
   width: 50%;
   margin-bottom: 25px;
+  max-width: 500px;
+  margin: 0 0 0 auto;
   @include media-breakpoint-down(xs) {
     width: 100%;
   }
   img {
     width: 60%;
-    border: 2px solid var(--second-color);
-    border-radius: 50%;
+    border: 1px solid var(--second-color);
   }
 }
 
@@ -76,6 +77,8 @@ export default {
   font-style: italic;
   font-weight: 800;
   width: 50%;
+  max-width: 500px;
+  margin: 0 auto 0 0;
   @include media-breakpoint-down(xs) {
     width: 100%;
   }

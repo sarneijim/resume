@@ -1,5 +1,5 @@
 <template>
-  <div id="cmp-edu" class="section">
+  <div id="edu" class="section">
     <h2>Academic background</h2>
     <ul class="edu-list">
       <li class="edu-item">
@@ -45,29 +45,23 @@
             </button>
           </div>
           <div class="modal-body">
-            <div class="career-company">
-              <a target="_blank" href="http://www.my01.io/">
-                <img src="@/assets/img/logo-indra2.png" alt="Nodejs" height="120">
-                <span class="sr-only">Universidad de Sevilla</span>
-              </a>
-            </div>
-            <div class="career-title career-title--europe">
+            <div class="edu-title">
               <span>Master's Degree. Industrial Engineer</span>
             </div>
-            <div class="career-date">
+            <div class="edu-date">
               <span>2007 - 2015</span>
             </div>
             <ul class="career-description">
-              <li class="career-description-item">
+              <li class="edu-description-item">
                 <p>Energy Specialty.</p>
               </li>
-              <li class="career-description-item">
+              <li class="edu-description-item">
                 <p>Thesis: Project of design and construction of a PV system.</p>
               </li>
-              <li class="career-description-item">
+              <li class="edu-description-item">
                 <p>SICUE exchange program: Universidad del País Vasco (Bilbao) / October 2013-December 2014.</p>
               </li>
-              <li class="career-description-item">
+              <li class="edu-description-item">
                 <p>Main Subjects</p>
                 <ul>
                   <li>Industrial installations, construction and architecture</li>
@@ -88,19 +82,25 @@
   </div>
 </template>
 <style scoped lang="scss">
-#cmp-edu {
-  background: var(--third-color);
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+#edu {
+  // background: var(--third-color);
+  background-image: url(../assets/img/bg2.png);
 }
 .edu-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 20px 0 30px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 .edu-item {
   position: relative;
   display: flex;
   width: 310px;
-  margin: 10px 30px;
+  margin: 10px 5px;
   border: 1px solid var(--second-color);
   background: var(--fifth-color);
   padding: 10px 0 60px;
@@ -120,6 +120,7 @@
     margin-top: 5px;
     margin-bottom: 20px;
     color: var(--second-color);
+    width: 80px;
   }
 }
 .edu-item-title {
@@ -131,10 +132,15 @@
 }
 .button {
   position: absolute;
-  right: -8px;
+  width: calc(100% - 10px);
+  margin-left: 5px;
+  @include media-breakpoint-up(sm) {
+    right: -8px;
+    width: 100%;
+  }
   bottom: 15px;
-  width: 100%;
-  width: 300px;
+
+  max-width: 300px;
   button {
     width: 100%;
     border: none;
@@ -147,8 +153,8 @@
   &:after {
     font-family: "Font Awesome 5 Free";
     position: absolute;
-    color: var(--fourth-color);
-    background-color: var(--fifth-color);
+    color: var(--fifth-color);
+    // background-color: var(--fifth-color);
     font-size: 20px;
     top: 7px;
     right: 10px;
@@ -157,71 +163,35 @@
     content: "\F054";
     font-weight: 800;
     border-radius: 10px;
+    pointer-events: none;
   }
 }
-.modal-body:before {
-  content: " ";
-  background: var(--third-color);
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  left: -26px;
-  width: 2px;
-  height: 22px;
-}
-.modal-body:after {
-  content: " ";
-  background: var(--third-color);
-  display: inline-block;
-  position: absolute;
-  bottom: 0;
-  left: -26px;
-  width: 2px;
-  height: calc(100% - 42px);
-}
-.career-title:before {
-  font-family: "Font Awesome 5 Free";
-  display: inline-block;
-  position: absolute;
-  color: var(--first-color);
-  font-size: 20px;
-  left: -35px;
-  top: 17px;
-  width: 20px;
-  height: 20px;
-}
-
-.career-title--europe:before {
-  content: "\f7a2";
-}
-.career-title--america:before {
-  content: "\f57d";
+.modal-header {
+  border: 0;
+  padding: 20px 20px 0 0;
+  z-index: 1;
 }
 .modal-body {
   position: relative;
-  margin-left: 30px;
-  padding: 25px 10px 50px 50px;
+  margin-left: 10px;
+  padding-top: 0;
+  color: var(--second-color);
+  margin-top: -15px;
 }
-.career-company {
+.edu-title {
   font-weight: 800;
   text-align: left;
-  img {
-    height: 20px;
-  }
+  margin: 0 0 20px;
+  color: var(--fourth-color);
 }
-.career-title {
-  font-weight: 800;
-  text-align: left;
-  margin: 7px 0;
-}
-.career-date {
+.edu-date {
   position: absolute;
-  right: 0;
-  top: 8px;
+  right: 40px;
+  top: 22px;
   font-size: 0.9em;
   font-style: italic;
 }
-.career-description-item {
+.edu-description-item {
   text-align: left;
   padding: 0 0 0 23px;
   position: relative;

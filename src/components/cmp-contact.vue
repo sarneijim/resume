@@ -1,5 +1,5 @@
 <template>
-  <div id="cmp-contact" class="section">
+  <div id="contact" class="section">
     <h2>Let's chat</h2>
     <div class="contact-main">
       <div class="intro">
@@ -53,9 +53,6 @@ export default {
         subject: this.$refs["contact-form"].subject.value,
         messaje: this.$refs["contact-form"].message.value
       };
-
-      console.log("hola me estan por enviar");
-      debugger;
       emailjs.send("gmail", "template_furTsNLf", data).then(
         function(response) {
           if (response.text === "OK") {
@@ -68,7 +65,6 @@ export default {
           );
         },
         function(err) {
-          alert("Ocurrio un problema al enviar  el correo");
           console.log("FAILDED. error=", err);
         }
       );
@@ -82,21 +78,60 @@ export default {
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
+#contact {
+  background: var(--fifth-color);
+}
 .contact-main {
   display: flex;
   flex-wrap: wrap;
+  color: var(--second-color);
+  max-width: 1000px;
+  width: 100%;
+  margin: 30px auto 0;
 }
-.intro,
+.intro {
+  width: 100%;
+  @include media-breakpoint-up(md) {
+    width: 40%;
+    width: 35%;
+    margin: 0 auto 0 0;
+  }
+}
 .form {
   width: 100%;
   @include media-breakpoint-up(md) {
-    width: 50%;
+    width: 60%;
+  }
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    > div {
+      @include media-breakpoint-up(sm) {
+        padding-right: 0;
+      }
+    }
   }
 }
-.contact-img img {
-  width: 90%;
+.contact-img {
+  max-height: 240px;
+  overflow: hidden;
+  img {
+    width: 90%;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+  }
   @include media-breakpoint-down(sm) {
     display: none;
   }
+}
+button {
+  border: none;
+  background: var(--fourth-color);
+  color: var(--fifth-color);
+  border-radius: 2px;
+  padding: 10px;
+  width: 100px;
+  margin-bottom: 20px;
 }
 </style>

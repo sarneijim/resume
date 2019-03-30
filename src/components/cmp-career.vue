@@ -1,5 +1,5 @@
 <template>
-  <div id="cmp-career" class="section">
+  <div id="career" class="section">
     <h2>Work experience</h2>
     <ul class="career-list">
       <li class="career-item">
@@ -94,7 +94,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-#cmp-career {
+#career {
   background: var(--fifth-color);
   color: var(--second-color);
 }

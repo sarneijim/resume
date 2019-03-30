@@ -1,5 +1,5 @@
 <template>
-  <div id="cmp-tech" class="section">
+  <div id="tech" class="section">
     <h2>Technical Skills</h2>
     <div class="tech-main" v-on="{mouseover: checkMouseover}">
       <div class="tech-list">
@@ -116,7 +116,7 @@ export default {
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
 
-#cmp-tech {
+#tech {
   background: var(--third-color);
   color: var(--second-color);
 }
@@ -191,7 +191,7 @@ export default {
   width: calc(100% / 10 - 2px);
   float: left;
   margin: 1px;
-  border: 2px solid var(--fourth-color);
+  border: 1px solid var(--second-color);
 }
 
 .shuffle-move {

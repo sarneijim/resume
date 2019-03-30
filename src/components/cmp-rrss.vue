@@ -10,7 +10,7 @@
         </a>
       </li>
       <li class="rrss-item">
-        <a class="rrss-link">
+        <a class="rrss-link" href="https://github.com/sarneijim" target="_blank">
           <i class="fab fa-github"></i>
         </a>
       </li>
@@ -84,7 +84,7 @@ export default {
     height: 150px;
     position: fixed;
     left: 0;
-    top: 480px;
+    top: 380px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 }

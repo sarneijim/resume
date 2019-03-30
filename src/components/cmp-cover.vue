@@ -4,6 +4,9 @@
       <source src="@/assets/video/video3.mp4" type="video/mp4">
     </video>
     <p class="cover-title">Always in search new challenges!</p>
+    <a class="cover-button" href="#about">
+      <i class="fas fa-chevron-down"></i>
+    </a>
   </div>
 </template>
 
@@ -26,7 +29,6 @@ export default {
 @import "~bootstrap/scss/mixins";
 
 #cmp-cover {
-  height: 400px;
   max-width: 100%;
   max-height: 100%;
   overflow: hidden;
@@ -37,9 +39,13 @@ export default {
   align-items: center;
   background-position: right top;
   background-size: 100% auto;
+  height: 100vh;
 }
 video {
-  width: 100%;
+  width: 300%;
+  @include media-breakpoint-up(md) {
+    width: 150%;
+  }
   opacity: 0.2;
 }
 .cover-container {
@@ -55,11 +61,25 @@ video {
   color: var(--fourth-color);
   position: absolute;
   font-size: 35px;
-  width: 330px;
-  font-family: "Fredericka the Great";
+  width: 350px;
+  font-family: "Candal", sans-serif;
   margin: 0;
   text-shadow: 5px 5px 5px #00000038;
   font-weight: 800;
+}
+.cover-button {
+  position: absolute;
+  bottom: 0;
+  font-size: 45px;
+  width: 100px;
+  height: 50px;
+  background: var(--fourth-color);
+  -moz-border-radius: 100px 100px 0 0;
+  -webkit-border-radius: 100px 100px 0 0;
+  border-radius: 100px 100px 0 0;
+  i {
+    color: var(--fifth-color);
+  }
 }
 </style>
 
