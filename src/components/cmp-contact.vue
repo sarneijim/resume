@@ -34,7 +34,10 @@
             <label for="message">Message</label>
             <textarea class="form-control" id="message" rows="3"></textarea>
           </div>
-          <button @click="submit">Submit</button>
+          <div class="button">
+            <div class="button-effect"></div>
+            <button @click="submit">Submit</button>
+          </div>
         </form>
       </div>
     </div>
@@ -130,8 +133,16 @@ button {
   background: var(--fourth-color);
   color: var(--fifth-color);
   border-radius: 2px;
-  padding: 10px;
+  padding: 8px;
   width: 100px;
   margin-bottom: 20px;
+  &:hover {
+    background: #06bc9b;
+    -webkit-transition: background-color 400ms linear;
+    -moz-transition: background-color 400ms linear;
+    -o-transition: background-color 400ms linear;
+    -ms-transition: background-color 400ms linear;
+    transition: background-color 400ms linear;
+  }
 }
 </style>

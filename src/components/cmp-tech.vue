@@ -118,6 +118,7 @@ export default {
 
 #tech {
   background: var(--third-color);
+  background-image: url(../assets/img/bg11.png);
   color: var(--second-color);
 }
 .tech-main {

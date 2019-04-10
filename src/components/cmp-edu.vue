@@ -87,7 +87,7 @@
 @import "~bootstrap/scss/mixins";
 #edu {
   // background: var(--third-color);
-  background-image: url(../assets/img/bg2.png);
+  // background-image: url(../assets/img/bg2.png);
 }
 .edu-list {
   display: flex;
@@ -139,8 +139,8 @@
     width: 100%;
   }
   bottom: 15px;
-
   max-width: 300px;
+  overflow: hidden;
   button {
     width: 100%;
     border: none;
@@ -149,18 +149,25 @@
     border-radius: 2px;
     padding: 10px 10px 10px 15px;
     text-align: left;
+    &:hover {
+      background: #06bc9b;
+      -webkit-transition: background-color 400ms linear;
+      -moz-transition: background-color 400ms linear;
+      -o-transition: background-color 400ms linear;
+      -ms-transition: background-color 400ms linear;
+      transition: background-color 400ms linear;
+    }
   }
   &:after {
     font-family: "Font Awesome 5 Free";
     position: absolute;
     color: var(--fifth-color);
-    // background-color: var(--fifth-color);
     font-size: 20px;
     top: 7px;
     right: 10px;
     width: 20px;
     height: 20px;
-    content: "\F054";
+    content: "\F138";
     font-weight: 800;
     border-radius: 10px;
     pointer-events: none;

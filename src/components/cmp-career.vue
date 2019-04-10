@@ -6,7 +6,7 @@
         <div class="career-company">
           <a target="_blank" href="http://www.my01.io/">
             <img src="@/assets/img/logo-ciena.png" alt="Nodejs" height="120">
-            <span class="sr-only">Indra</span>
+            <span class="sr-only">Ciena</span>
           </a>
         </div>
         <div class="career-title career-title--america">
@@ -20,22 +20,16 @@
             <p>Experience with web based technologies like HTML/HTML5 (Jade), CSS/CSS3 (Sass) and JavaScript (JQuery)</p>
           </li>
           <li class="career-description-item">
-            <p>Develop responsive projects on the web by the use of libraries (Bootstrap)</p>
+            <p>Develop responsive projects on the web by the use of libraries (Element UI)</p>
           </li>
           <li class="career-description-item">
-            <p>Modular and reusable code to be used with the web content management platform OWCS (Oracle Web Center Sites)</p>
+            <p>Use of task runners such as Yarn</p>
           </li>
           <li class="career-description-item">
-            <p>Knowledge of web accessibility and W3C standards</p>
+            <p>Use of frameworks (Ember & Vue)</p>
           </li>
           <li class="career-description-item">
-            <p>Use of task runners such as Grunt and Gulp</p>
-          </li>
-          <li class="career-description-item">
-            <p>Use of templating engines (handlebars)</p>
-          </li>
-          <li class="career-description-item">
-            <p>Knowledge of version control systems (Git, SVN)</p>
+            <p>Knowledge of version control systems (Git)</p>
           </li>
           <li class="career-description-item">
             <p>Use of project management tools (JIRA)</p>

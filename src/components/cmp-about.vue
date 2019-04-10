@@ -1,7 +1,10 @@
 <template>
   <div id="about" class="section">
     <div class="about-img">
-      <img src="@/assets/img/y4.jpg" alt="sara">
+      <!-- <img src="@/assets/img/y4.jpg" alt="sara"> -->
+      <video autoplay muted loop id="myVideo">
+        <source src="@/assets/video/yo4.mp4" type="video/mp4">
+      </video>
     </div>
     <div class="about-text">
       <p class="about-title">Sara Neila</p>
@@ -55,9 +58,11 @@ export default {
   @include media-breakpoint-down(xs) {
     width: 100%;
   }
-  img {
+  img,
+  video {
     width: 60%;
-    border: 1px solid var(--second-color);
+    max-width: 225px;
+    // border: 1px solid var(--second-color);
   }
 }
 
@@ -65,16 +70,16 @@ export default {
   color: var(--first-color);
   font-size: 30px;
   font-weight: 800;
-  font-style: italic;
   width: 100%;
+  margin-bottom: 0px;
 }
 
 .about-subtitle {
   font-size: 22px;
   color: var(--first-color);
+  font-style: italic;
 }
 .about-text {
-  font-style: italic;
   font-weight: 800;
   width: 50%;
   max-width: 500px;
@@ -84,9 +89,8 @@ export default {
   }
 }
 .about-description {
-  // background: #f2f2f2;
   color: var(--second-color);
-  padding: 0 10px 30px;
+  padding: 0 10px 10px;
   p {
     font-style: italic;
     max-width: 450px;
@@ -96,10 +100,12 @@ export default {
   }
 }
 .about-icons {
-  font-size: 30px;
+  font-size: 25px;
   display: flex;
   justify-content: space-around;
   color: var(--fourth-color);
+  max-width: 300px;
+  margin: 0 auto;
   @include media-breakpoint-down(sm) {
     font-size: 20px;
   }
