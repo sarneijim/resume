@@ -1,6 +1,6 @@
 <template>
   <div id="contact" class="section">
-    <h2>Let's chat</h2>
+    <!-- <h2>Let's chat</h2>
     <div class="contact-main">
       <div class="intro">
         <p>Feel free to drop me a line! If you're interested in working with me, please provide as much information as you possibly can about your project.</p>
@@ -40,108 +40,111 @@
           </div>
         </form>
       </div>
-    </div>
+    </div>-->
   </div>
 </template>
-<script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
-  <script type="text/javascript">
-(function() {
-  emailjs.init("user_aHeIF2s38iNgGgSLb6RyK");
-})();
+// <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+//   <script type="text/javascript">
+// (function() {
+//   emailjs.init("user_aHeIF2s38iNgGgSLb6RyK");
+// })();
+//
 </script>
-<script>
-export default {
-  name: "Contact",
-  methods: {
-    submit() {
-      let data = {
-        name: this.$refs["contact-form"].name.value,
-        email: this.$refs["contact-form"].email.value,
-        subject: this.$refs["contact-form"].subject.value,
-        messaje: this.$refs["contact-form"].message.value
-      };
-      emailjs.send("gmail", "template_furTsNLf", data).then(
-        function(response) {
-          if (response.text === "OK") {
-            alert("El correo se ha enviado con éxito");
-          }
-        }
-        // function(err) {
-        //   console.log("FAILDED. error=", err);
-        // }
-      );
-    }
-  }
-};
+// <script>
+// export default {
+//   name: "Contact",
+//   methods: {
+//     submit() {
+//       let data = {
+//         name: this.$refs["contact-form"].name.value,
+//         email: this.$refs["contact-form"].email.value,
+//         subject: this.$refs["contact-form"].subject.value,
+//         messaje: this.$refs["contact-form"].message.value
+//       };
+//       emailjs.send("gmail", "template_furTsNLf", data).then(
+//         function(response) {
+//           if (response.text === "OK") {
+//             alert("El correo se ha enviado con éxito");
+//           }
+//         }
+//         // function(err) {
+//         //   console.log("FAILDED. error=", err);
+//         // }
+//       );
+//     }
+//   }
+// };
+//
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-@import "~bootstrap/scss/functions";
-@import "~bootstrap/scss/variables";
-@import "~bootstrap/scss/mixins";
-#contact {
-  background: var(--fifth-color);
-}
-.contact-main {
-  display: flex;
-  flex-wrap: wrap;
-  color: var(--second-color);
-  max-width: 1000px;
-  width: 100%;
-  margin: 30px auto 0;
-}
-.intro {
-  width: 100%;
-  @include media-breakpoint-up(md) {
-    width: 40%;
-    width: 35%;
-    margin: 0 auto 0 0;
-  }
-}
-.form {
-  width: 100%;
-  @include media-breakpoint-up(md) {
-    width: 60%;
-  }
-  form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    > div {
-      @include media-breakpoint-up(sm) {
-        padding-right: 0;
-      }
-    }
-  }
-}
-.contact-img {
-  max-height: 240px;
-  overflow: hidden;
-  img {
-    width: 90%;
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);
-  }
-  @include media-breakpoint-down(sm) {
-    display: none;
-  }
-}
-button {
-  border: none;
-  background: var(--fourth-color);
-  color: var(--fifth-color);
-  border-radius: 2px;
-  padding: 8px;
-  width: 100px;
-  margin-bottom: 20px;
-  &:hover {
-    background: #06bc9b;
-    -webkit-transition: background-color 400ms linear;
-    -moz-transition: background-color 400ms linear;
-    -o-transition: background-color 400ms linear;
-    -ms-transition: background-color 400ms linear;
-    transition: background-color 400ms linear;
-  }
-}
+// <!-- Add "scoped" attribute to limit CSS to this component only -->
+// <style scoped lang="scss">
+// @import "~bootstrap/scss/functions";
+// @import "~bootstrap/scss/variables";
+// @import "~bootstrap/scss/mixins";
+// #contact {
+//   background: var(--fifth-color);
+// }
+// .contact-main {
+//   display: flex;
+//   flex-wrap: wrap;
+//   color: var(--second-color);
+//   max-width: 1000px;
+//   width: 100%;
+//   margin: 30px auto 0;
+// }
+// .intro {
+//   width: 100%;
+//   @include media-breakpoint-up(md) {
+//     width: 40%;
+//     width: 35%;
+//     margin: 0 auto 0 0;
+//   }
+// }
+// .form {
+//   width: 100%;
+//   @include media-breakpoint-up(md) {
+//     width: 60%;
+//   }
+//   form {
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: center;
+//     > div {
+//       @include media-breakpoint-up(sm) {
+//         padding-right: 0;
+//       }
+//     }
+//   }
+// }
+// .contact-img {
+//   max-height: 240px;
+//   overflow: hidden;
+//   img {
+//     width: 90%;
+//     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+//     filter: grayscale(100%);
+//   }
+//   @include media-breakpoint-down(sm) {
+//     display: none;
+//   }
+// }
+// button {
+//   border: none;
+//   background: var(--fourth-color);
+//   color: var(--fifth-color);
+//   border-radius: 2px;
+//   padding: 8px;
+//   width: 100px;
+//   margin-bottom: 20px;
+//   &:hover {
+//     background: #06bc9b;
+//     -webkit-transition: background-color 400ms linear;
+//     -moz-transition: background-color 400ms linear;
+//     -o-transition: background-color 400ms linear;
+//     -ms-transition: background-color 400ms linear;
+//     transition: background-color 400ms linear;
+//   }
+// }
+//
 </style>
