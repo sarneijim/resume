@@ -4,7 +4,7 @@
     <ul class="career-list">
       <li class="career-item">
         <div class="career-company">
-          <a target="_blank" href="http://www.my01.io/">
+          <a target="_blank" href="https://www.ciena.com/">
             <img src="@/assets/img/logo-ciena.png" alt="Nodejs" height="120">
             <span class="sr-only">Ciena</span>
           </a>
@@ -38,7 +38,7 @@
       </li>
       <li class="career-item">
         <div class="career-company">
-          <a target="_blank" href="http://www.my01.io/">
+          <a target="_blank" href="https://www.indracompany.com/">
             <img src="@/assets/img/logo-indra2.png" alt="Nodejs" height="120">
             <span class="sr-only">Indra</span>
           </a>

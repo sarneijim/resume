@@ -150,7 +150,7 @@
     padding: 10px 10px 10px 15px;
     text-align: left;
     &:hover {
-      background: #06bc9b;
+      background: #06bc58;
       -webkit-transition: background-color 400ms linear;
       -moz-transition: background-color 400ms linear;
       -o-transition: background-color 400ms linear;

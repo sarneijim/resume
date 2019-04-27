@@ -1,40 +1,50 @@
 <template>
   <div id="portafolio" class="section">
     <h2>Portafolio</h2>
-    <slick ref="slick" :options="slickOptions">
-      <a href="http://placehold.it/2000x1000">
+    <div class="portafolio-carousel">
+      <slick ref="slick" :options="slickOptions">
         <div class="card">
-          <img src="@/assets/img/tranq.png" alt>
-          <div class="card-body">
-            <p class="card-text">Tranq.</p>
-          </div>
+          <a target="_blank" href="https://youtu.be/lP6eNE6Adpk">
+            <div class="card-container">
+              <img src="@/assets/img/tranq.png" alt>
+              <div class="card-body">
+                <p class="card-text">Tranq</p>
+              </div>
+            </div>
+          </a>
         </div>
-      </a>
-      <a href="http://placehold.it/2000x1000">
         <div class="card">
-          <img src="@/assets/img/bde.png" alt>
-          <div class="card-body">
-            <p class="card-text">Tranq.</p>
-          </div>
+          <a target="_blank" href="https://www.bde.es/">
+            <div class="card-container">
+              <img src="@/assets/img/bde.png" alt>
+              <div class="card-body">
+                <p class="card-text">Banco de España</p>
+              </div>
+            </div>
+          </a>
         </div>
-      </a>
-      <a href="http://placehold.it/2000x1000">
         <div class="card">
-          <img src="@/assets/img/naturgy.png" alt>
-          <div class="card-body">
-            <p class="card-text">Tranq.</p>
-          </div>
+          <a target="_blank" href="https://www.naturgy.com/">
+            <div class="card-container">
+              <img src="@/assets/img/naturgy.png" alt>
+              <div class="card-body">
+                <p class="card-text">Naturgy</p>
+              </div>
+            </div>
+          </a>
         </div>
-      </a>
-      <a href="http://placehold.it/2000x1000">
         <div class="card">
-          <img src="@/assets/img/ciena.png" alt>
-          <div class="card-body">
-            <p class="card-text">Tranq.</p>
-          </div>
+          <a target="_blank" href="https://www.blueplanet.com/">
+            <div class="card-container">
+              <img src="@/assets/img/ciena.png" alt>
+              <div class="card-body">
+                <p class="card-text">Ciena</p>
+              </div>
+            </div>
+          </a>
         </div>
-      </a>
-    </slick>
+      </slick>
+    </div>
   </div>
 </template>
 
@@ -49,27 +59,98 @@ export default {
         infinite: true,
         slidesToShow: 3,
         dots: true,
-        infinite: true,
         speed: 300,
-        adaptiveHeight: true
+        adaptiveHeight: true,
+        responsive: [
+          {
+            breakpoint: 1000,
+            settings: {
+              slidesToShow: 2
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 1
+            }
+          }
+        ]
       }
     };
   }
 };
 </script>
-<style src="slick-carousel/slick/slick.css"></style>
+
 <style scoped lang="scss">
 .card {
-  border: 2px solid var(--fourth-color);
-  height: 260px;
-  width: 85%;
+  padding: 10px;
   margin: 0 auto;
+  border: none;
+  background: transparent;
+  a {
+    height: 260px;
+    width: 90%;
+  }
+  .card-container {
+    border: 1px solid var(--second-color);
+    overflow: hidden;
+    border-radius: 3px;
+    background: var(--third-color);
+  }
   img {
     height: 200px;
+    margin: 0 auto;
   }
+  &:hover {
+    border-color: #06bc58;
+    .card-body {
+      background: #06bc58;
+      -webkit-transition: background-color 400ms linear;
+      -moz-transition: background-color 400ms linear;
+      -o-transition: background-color 400ms linear;
+      -ms-transition: background-color 400ms linear;
+      transition: background-color 400ms linear;
+    }
+  }
+}
+a:hover {
+  text-decoration: none;
 }
 .card-body {
   background: var(--fourth-color);
   color: var(--fifth-color);
+}
+.portafolio-carousel {
+  width: calc(100% - 70px);
+  margin: 38px auto 68px;
+}
+</style>
+
+<style lang="scss">
+.portafolio-carousel {
+  .slick-dots li.slick-active button:before {
+    color: var(--fourth-color);
+  }
+
+  .slick-arrow {
+    &:hover:before {
+      color: #06bc58;
+      -webkit-transition: background-color 400ms linear;
+      -moz-transition: background-color 400ms linear;
+      -o-transition: background-color 400ms linear;
+      -ms-transition: background-color 400ms linear;
+      transition: background-color 400ms linear;
+    }
+    &:before {
+      color: var(--fourth-color);
+      opacity: 1;
+    }
+  }
+  .slick-dots {
+    bottom: -40px;
+    li button:before {
+      color: #06bc58;
+    }
+  }
 }
 </style>
