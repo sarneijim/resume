@@ -7,6 +7,8 @@ global.$ = jQuery
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './custom-style.scss'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 import Slick from 'vue-slick';
 
 Vue.config.productionTip = false
