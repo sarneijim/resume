@@ -43,13 +43,17 @@
     </div>
   </div>
 </template>
-
+<script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+  <script type="text/javascript">
+(function() {
+  emailjs.init("user_aHeIF2s38iNgGgSLb6RyK");
+})();
+</script>
 <script>
 export default {
   name: "Contact",
   methods: {
     submit() {
-      debugger;
       let data = {
         name: this.$refs["contact-form"].name.value,
         email: this.$refs["contact-form"].email.value,
@@ -61,15 +65,10 @@ export default {
           if (response.text === "OK") {
             alert("El correo se ha enviado con éxito");
           }
-          console.log(
-            "SUCCESS. status=%d, text=%s",
-            response.status,
-            resonse.text
-          );
-        },
-        function(err) {
-          console.log("FAILDED. error=", err);
         }
+        // function(err) {
+        //   console.log("FAILDED. error=", err);
+        // }
       );
     }
   }

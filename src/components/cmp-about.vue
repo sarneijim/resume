@@ -3,7 +3,10 @@
     <div class="about-img">
       <!-- <img src="@/assets/img/y4.jpg" alt="sara"> -->
       <video autoplay muted loop id="myVideo">
-        <source src="@/assets/video/yo4.mp4" type="video/mp4">
+        <source
+          src="https://res.cloudinary.com/sarneijim/video/upload/v1556347377/resume/yo4.mp4"
+          type="video/mp4"
+        >
       </video>
     </div>
     <div class="about-text">
