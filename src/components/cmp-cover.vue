@@ -1,7 +1,7 @@
 <template>
   <div id="cmp-cover">
     <video autoplay muted loop id="myVideo">
-      <source src="@/assets/video/video3.mp4" type="video/mp4">
+      <source src="https://res.cloudinary.com/sarneijim/video/upload/v1556347186/resume/video3.mp4" type="video/mp4">
     </video>
     <p class="cover-title">PUSH yourself, because no one else is going to do it for you.</p>
     <a class="cover-button" href="#about">
