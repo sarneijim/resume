@@ -1,5 +1,6 @@
 <template>
   <div id="portafolio" class="section">
+    <h2>Portafolio</h2>
     <slick ref="slick" :options="slickOptions">
       <a href="http://placehold.it/2000x1000">
         <div class="card">
