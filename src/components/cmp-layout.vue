@@ -7,6 +7,7 @@
         <cmp-cover></cmp-cover>
         <cmp-about></cmp-about>
         <cmp-tech></cmp-tech>
+        <cmp-portafolio></cmp-portafolio>
         <cmp-career></cmp-career>
         <cmp-edu></cmp-edu>
         <cmp-contact></cmp-contact>
@@ -21,6 +22,7 @@ import cmpRrss from "./cmp-rrss.vue";
 import cmpCover from "./cmp-cover.vue";
 import cmpAbout from "./cmp-about.vue";
 import cmpTech from "./cmp-tech.vue";
+import cmpPortafolio from "./cmp-portafolio.vue";
 import cmpCareer from "./cmp-career.vue";
 import cmpEdu from "./cmp-edu.vue";
 import cmpContact from "./cmp-contact.vue";
@@ -33,6 +35,7 @@ export default {
     cmpCover,
     cmpAbout,
     cmpTech,
+    cmpPortafolio,
     cmpCareer,
     cmpEdu,
     cmpContact

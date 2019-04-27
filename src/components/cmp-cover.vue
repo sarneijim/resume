@@ -3,7 +3,7 @@
     <video autoplay muted loop id="myVideo">
       <source src="@/assets/video/video3.mp4" type="video/mp4">
     </video>
-    <p class="cover-title">Always in search new challenges!</p>
+    <p class="cover-title">PUSH yourself, because no one else is going to do it for you.</p>
     <a class="cover-button" href="#about">
       <i class="fas fa-chevron-down"></i>
     </a>
@@ -46,7 +46,7 @@ video {
   @include media-breakpoint-up(md) {
     width: 150%;
   }
-  opacity: 0.2;
+  opacity: 0.85;
 }
 .cover-container {
   height: 100%;
@@ -58,10 +58,10 @@ video {
   margin: 0 auto 0 0;
 }
 .cover-title {
-  color: var(--fourth-color);
+  color: var(--fifth-color);
   position: absolute;
   font-size: 35px;
-  width: 350px;
+  width: 450px;
   font-family: "Candal", sans-serif;
   margin: 0;
   text-shadow: 5px 5px 5px #00000038;

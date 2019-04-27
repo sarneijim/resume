@@ -3,7 +3,7 @@
     <h2>Let's chat</h2>
     <div class="contact-main">
       <div class="intro">
-        <p>Feel free to drop me a line! If you're interested in working with me, please provide as much information as you possibly can about your project. I'll get back to you as soon as possible. Looking forward to hearing from you!</p>
+        <p>Feel free to drop me a line! If you're interested in working with me, please provide as much information as you possibly can about your project.</p>
         <div class="contact-img">
           <img src="@/assets/img/contact.jpg" alt="email">
         </div>
